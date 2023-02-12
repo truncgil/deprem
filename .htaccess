@@ -12,6 +12,10 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 RewriteRule ^$1/(.*)$ /$1.php?city=$2
 
+
+<IfModule mod_headers.c>    
+    Header set Access-Control-Allow-Origin *
+</IfModule>
 # php -- BEGIN cPanel-generated handler, do not edit
 # “ea-php56” paketini varsayılan “PHP” programlama dili olarak ayarlayın.
 <IfModule mime_module>
